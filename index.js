@@ -103,7 +103,6 @@
 //                 };
 //         }
 // }
-
 //       var counter1 = new Counter();
 //       counter1.incrementCounter();
 //       counter1.incrementCounter();
@@ -127,3 +126,27 @@
 //         console.log('b called');
 // }
 // b();
+
+//anonyous function 
+//var b = function(){
+//         console.log('b called');
+// } here function(){ }
+// is an anonyous function, we can say in simple word function is withpout function name.
+
+
+//name function expression 
+// var x = function xyz(){
+//         console.log('xyz called');
+// }
+// function stored in variable and that have own name that is called name function expression
+
+
+//what is parameter or Argument.?
+// example
+// function addition (parameter1, parameter2) { // which is passed directly in function is called parameter.
+//         return parameter1 + parameter2;
+// }
+// console.log(addition(1,2)); // which is passed by calling function is called argument.
+
+
+// first class function in javascript 
