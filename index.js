@@ -75,17 +75,55 @@
 
 
       //closures example to use with var
-      function x(){
-        for(var i = 1; i<=5; i++) { 
-                function closure(i){
-                        setTimeout(function (){
-                                console.log(i);
-                        }, i * 1000);
-                }
-                closure(i);
-                
-        }
-        console.log('Done');
-      }
+//       function x(){
+//         for(var i = 1; i<=5; i++) { 
+//                 function closure(i){
+//                         setTimeout(function (){
+//                                 console.log(i);
+//                         }, i * 1000);
+//                 }
+//                 closure(i);
+//         }
+//         console.log('Done');
+//       }
+//       x();
+   
 
-      x();   
+      //another example 
+//       class Counter {
+//         constructor() {
+//                 var count = 0;
+//                 this.incrementCounter = function () {
+//                         count++;
+//                         console.log(count);
+//                 };
+//                 this.decrementCounter = function () {
+//                         count--;
+//                         console.log(count);
+//                 };
+//         }
+// }
+
+//       var counter1 = new Counter();
+//       counter1.incrementCounter();
+//       counter1.incrementCounter();
+//       counter1.decrementCounter();
+
+
+//function statement or function Declaration is same thing
+// :-- this way of creating a function is known as a function statement.
+//you can call this function before declaration
+// example-
+// function a(){
+//         console.log('a called');
+// }
+// a();
+
+//function expression
+// :-- this way of creating a function to store it in a variable is known as a function expression.
+////you cann't call this function before declaration like here: b();
+//example-
+// var b = function(){
+//         console.log('b called');
+// }
+// b();
