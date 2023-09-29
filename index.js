@@ -216,30 +216,75 @@
 
 
 // Pass Functions as Arguments:
-function doSomething(callback){
-      console.log("doSomething called");
-      callback();
-}
-function sayHi (){
-      console.log("sayHi called");
-}
-doSomething(sayHi);
-// Return Functions from Functions:
-function first(multiple) {
-      return function (number){
-            return multiple * number;
-      };
-}
-var multiply = first(2); // console.log(multiply);
-console.log(multiply(5));
-// Assign Functions to Variables:
-var sayHello = function () {
-      console.log('Say Hello');
-}
-sayHello();
-// Create Anonymous Functions (Function Expressions):
-const add = function (x, y){
-      return x + y;
-}
-const result = add(5,6);
-console.log(result);
+// function doSomething(callback){
+//       console.log("doSomething called");
+//       callback();
+// }
+// function sayHi (){
+//       console.log("sayHi called");
+// }
+// doSomething(sayHi);
+// // Return Functions from Functions:
+// function first(multiple) {
+//       return function (number){
+//             return multiple * number;
+//       };
+// }
+// var multiply = first(2); // console.log(multiply);
+// console.log(multiply(5));
+// // Assign Functions to Variables:
+// var sayHello = function () {
+//       console.log('Say Hello');
+// }
+// sayHello();
+// // Create Anonymous Functions (Function Expressions):
+// const add = function (x, y){
+//       return x + y;
+// }
+// const result = add(5,6);
+// console.log(result);
+
+
+//callback function in javascript
+//A callback function in JavaScript is a function that is
+//  passed as an argument to another function and is typically executed after some 
+//  asynchronous operation has completed or as a response to an event.
+      // setTimeout(function (){
+      //       console.log('setTimeout');
+      // }, 5000);
+
+      // function x(y){
+      //       console.log('x');
+      //       y();
+      // }
+      // x(function y(){
+      //       console.log('y');
+      // });      
+
+
+//addEventListener in javascript
+// addEventListener is a method in JavaScript that allows you to attach event handlers to
+//  HTML elements. It is commonly used to listen for specific events (like clicks, mouse
+// movements, keypresses, etc.) on web pages and execute JavaScript code in response to 
+// those events. 
+
+document.getElementById("clickMe").addEventListener('mouseover', function() {
+      // Code to execute when the mouse hovers over the button
+      clickMe.style.backgroundColor = 'yellow';
+    });
+    
+    document.getElementById("clickMe").addEventListener('mouseout', function() {
+      // Code to execute when the mouse leaves the button
+      clickMe.style.backgroundColor = 'red';
+    });
+    
+
+      function addEventListener(){
+            var count = 0;
+            document.getElementById('clickMe').addEventListener('click', function(){
+            console.log('Button Clicked', ++count);
+            });     
+      }
+      addEventListener();
+
+
