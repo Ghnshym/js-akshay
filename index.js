@@ -288,7 +288,7 @@
       // }
       // addEventListener();
 
-      
+
 
       console.log('Start');
 
@@ -297,5 +297,3 @@ setTimeout(function() {
 }, 1000);
 
 console.log('End');
-
-
