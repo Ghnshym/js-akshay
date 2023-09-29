@@ -268,24 +268,33 @@
 // movements, keypresses, etc.) on web pages and execute JavaScript code in response to 
 // those events. 
 
-document.getElementById("clickMe").addEventListener('mouseover', function() {
-      // Code to execute when the mouse hovers over the button
-      clickMe.style.backgroundColor = 'yellow';
-    });
+// document.getElementById("clickMe").addEventListener('mouseover', function() {
+//       // Code to execute when the mouse hovers over the button
+//       clickMe.style.backgroundColor = 'yellow';
+//     });
     
-    document.getElementById("clickMe").addEventListener('mouseout', function() {
-      // Code to execute when the mouse leaves the button
-      clickMe.style.backgroundColor = 'red';
-    });
+//     document.getElementById("clickMe").addEventListener('mouseout', function() {
+//       // Code to execute when the mouse leaves the button
+//       clickMe.style.backgroundColor = 'red';
+//     });
     
 
-      function addEventListener(){
-            var count = 0;
-            document.getElementById('clickMe').addEventListener('click', function(){
-            clickMe.style.backgroundColor = "green";
-            console.log('Button Clicked', ++count);
-            });     
-      }
-      addEventListener();
+      // function addEventListener(){
+      //       var count = 0;
+      //       document.getElementById('clickMe').addEventListener('click', function(){
+      //       clickMe.style.backgroundColor = "green";
+      //       console.log('Button Clicked', ++count);
+      //       });     
+      // }
+      // addEventListener();
+
+
+      console.log('Start');
+
+setTimeout(function() {
+  console.log('Inside setTimeout callback');
+}, 1000);
+
+console.log('End');
 
 
