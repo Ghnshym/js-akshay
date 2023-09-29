@@ -282,6 +282,7 @@ document.getElementById("clickMe").addEventListener('mouseover', function() {
       function addEventListener(){
             var count = 0;
             document.getElementById('clickMe').addEventListener('click', function(){
+            clickMe.style.backgroundColor = "green";
             console.log('Button Clicked', ++count);
             });     
       }
