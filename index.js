@@ -426,39 +426,80 @@
 
 // reduce function in javascript :- reduce function in javascript : reduce function in javascript
 // this is using treditional function 
-const arr = [17, 18, 3, 4, 1, 61];
-function sumNumbar (arr) {
-      let sum = 0;
-      for (let i = 0; i < arr.length; i++) {
-            sum = sum + arr[i];
-      }
-      return sum;
-}
-console.log(sumNumbar(arr));
-//Now calculate this using reduce function.
-const output = arr.reduce(function (acc, curr){
-      acc = acc + curr;
-      return acc;
-}, 0);
-console.log(output);
+// const arr = [17, 18, 3, 4, 1, 61];
+// function sumNumbar (arr) {
+//       let sum = 0;
+//       for (let i = 0; i < arr.length; i++) {
+//             sum = sum + arr[i];
+//       }
+//       return sum;
+// }
+// console.log(sumNumbar(arr));
+// //Now calculate this using reduce function.
+// const output = arr.reduce(function (acc, curr){
+//       acc = acc + curr;
+//       return acc;
+// }, 0);
+// console.log(output);
 
-//another example to find Maximum number
-function maxNumbar (arr) {
-      let max = 0;
-      for (let i = 0; i < arr.length; i++) {
-            if(arr[i] > max){
-                  max = arr[i];
-            }
-      }
-      return max;
-}
-console.log(maxNumbar(arr));
-//Now solve with reduce method.
-const outPut = arr.reduce( function (acc, curr) {
-       if(curr > acc ){
-            acc = curr;
-       }
-       return acc;
-}, 0)
+// //another example to find Maximum number
+// function maxNumbar (arr) {
+//       let max = 0;
+//       for (let i = 0; i < arr.length; i++) {
+//             if(arr[i] > max){
+//                   max = arr[i];
+//             }
+//       }
+//       return max;
+// }
+// console.log(maxNumbar(arr));
+// //Now solve with reduce method.
+// const outPut = arr.reduce( function (acc, curr) {
+//        if(curr > acc ){
+//             acc = curr;
+//        }
+//        return acc;
+// }, 0)
 
-console.log(outPut);
+// console.log(outPut);
+
+// const users = [
+//       {firstName: 'John', lastName: 'deo', age : 36},
+//       {firstName: 'Rahul', lastName: 'raj', age : 36},
+//       {firstName: 'Raushan', lastName: 'singh', age : 24},
+//       {firstName: 'pritam', lastName: 'roy', age : 42},
+// ];
+// map
+// const output1 = users.map(function (x) {
+//       return x.firstName + " " + x.lastName + " " + x.age;
+// });
+// console.log(output1);
+//reduce
+// const output = users.reduce(function (acc, curr) {
+//       if(acc[curr.age]) {
+//             acc[curr.age] = ++acc[curr.age];
+//       }
+//       else {
+//             acc[curr.age] = 1;
+//       }
+//       return acc;
+// }, {});
+
+// console.log(output);
+
+// print first name if people have age is > 30.
+// const output = users.filter(function (X) {
+//       return X.age > 30;
+// }).map(function (x) {
+//       return " Name: " + x.firstName + ", age: " + x.age;
+// });
+// console.log(output);
+
+//you can also achive this by reduce method
+// const output = users.reduce(function (acc, curr){
+//       if(curr.age > 30){
+//             acc.push(curr.firstName);
+//       }
+//       return acc;
+// }, []);
+// console.log(output);
