@@ -463,12 +463,12 @@
 
 // console.log(outPut);
 
-const users = [
-      {firstName: 'John', lastName: 'deo', age : 36},
-      {firstName: 'Rahul', lastName: 'raj', age : 36},
-      {firstName: 'Raushan', lastName: 'singh', age : 24},
-      {firstName: 'pritam', lastName: 'roy', age : 42},
-];
+// const users = [
+//       {firstName: 'John', lastName: 'deo', age : 36},
+//       {firstName: 'Rahul', lastName: 'raj', age : 36},
+//       {firstName: 'Raushan', lastName: 'singh', age : 24},
+//       {firstName: 'pritam', lastName: 'roy', age : 42},
+// ];
 // map
 // const output1 = users.map(function (x) {
 //       return x.firstName + " " + x.lastName + " " + x.age;
@@ -488,18 +488,41 @@ const users = [
 // console.log(output);
 
 // print first name if people have age is > 30.
-const output = users.filter(function (X) {
-      return X.age > 30;
-}).map(function (x) {
-      return x.firstName;
-});
-console.log(output);
+// const output = users.filter(function (X) {
+//       return X.age > 30;
+// }).map(function (x) {
+//       return x.firstName;
+// });
+// console.log(output);
 
 // you can also achive this by reduce method
-const output1 = users.reduce(function (acc, curr){
-      if(curr.age > 30){
-            acc.push(curr.firstName);
-      }
-      return acc;
-}, []);
-console.log(output1);
+// const output1 = users.reduce(function (acc, curr){
+//       if(curr.age > 30){
+//             acc.push(curr.firstName);
+//       }
+//       return acc;
+// }, []);
+// console.log(output1);
+
+//promises in javaScript 
+// : - The Promise is an object that  represents the eventual completion (or failure) of 
+//an asynchronous operation and its resulting value.
+
+// const GITHUB_API = "https://api.github.com/users/Ghnshym";
+
+// const user = fetch(GITHUB_API);
+// // console.log(user); // pending state and promises is fulfilled.
+
+// user.then(function (data) {
+//       console.log(data);
+// });
+
+// example of Promise with promise chaining async
+const order = createOrder(cart)
+.then(function (orderId) {
+      return proceedToPayment(orderId);
+}).then(function (paymentInfo) {
+      return showOrderSummary(paymentInfo);
+}).then(function (paymentInfo) {
+      return updateWalletBalance(paymentInfo);
+});
