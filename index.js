@@ -305,37 +305,63 @@
 
 // const radius = [5,7,9,13];
 
-const calculateArea = function (radius) {
-      const output = [];
-      for (let i = 0; i < radius.length; i++) {
-            output.push(Math.PI * radius[i] * radius[i]);
-      }
-      return output;
-};
+// const calculateArea = function (radius) {
+//       const output = [];
+//       for (let i = 0; i < radius.length; i++) {
+//             output.push(Math.PI * radius[i] * radius[i]);
+//       }
+//       return output;
+// };
 
-console.log(calculateArea(radius));
+// console.log(calculateArea(radius));
 
-const calculateCicumference = function (radius) {
-      const output = [];
-      for (let i = 0; i < radius.length; i++) {
-            output.push(2 * Math.PI * radius[i]);
-      }
-      return output;
-};
+// const calculateCicumference = function (radius) {
+//       const output = [];
+//       for (let i = 0; i < radius.length; i++) {
+//             output.push(2 * Math.PI * radius[i]);
+//       }
+//       return output;
+// };
 
-console.log(calculateCicumference(radius));
+// console.log(calculateCicumference(radius));
 
 
-const calculateDiameter = function (radius) {
-      const output = [];
-      for (let i = 0; i < radius.length; i++) {
-            output.push(2 * radius[i]);
-      }
-      return output;
-};
+// const calculateDiameter = function (radius) {
+//       const output = [];
+//       for (let i = 0; i < radius.length; i++) {
+//             output.push(2 * radius[i]);
+//       }
+//       return output;
+// };
 
-console.log(calculateDiameter(radius));
+// console.log(calculateDiameter(radius));
 //you can optimize this code to manage easy debugging
+//example how can we make easier to calculate
 
-// const radius = [5, 6, 7, 8];
+const radius = [5, 6, 7, 8];
+
+const area = function (radius) {
+      return Math.PI * radius * radius;
+};
+
+const diameter = function (radius) {
+      return 2 * radius;
+}
+
+const cicumference = function (radius) {
+      return 2 * Math.PI * radius;
+}
+
+const calculate = function (radius, logic) {
+      const output = [];
+      for (let i = 0; i < radius.length; i++) {
+            output.push(logic(radius[i]));
+      }
+      return output;
+};
+
+console.log(calculate(radius, area));
+console.log(calculate(radius, diameter));
+console.log(calculate(radius, cicumference));
+
 
