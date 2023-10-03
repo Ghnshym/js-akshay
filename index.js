@@ -463,12 +463,12 @@
 
 // console.log(outPut);
 
-// const users = [
-//       {firstName: 'John', lastName: 'deo', age : 36},
-//       {firstName: 'Rahul', lastName: 'raj', age : 36},
-//       {firstName: 'Raushan', lastName: 'singh', age : 24},
-//       {firstName: 'pritam', lastName: 'roy', age : 42},
-// ];
+const users = [
+      {firstName: 'John', lastName: 'deo', age : 36},
+      {firstName: 'Rahul', lastName: 'raj', age : 36},
+      {firstName: 'Raushan', lastName: 'singh', age : 24},
+      {firstName: 'pritam', lastName: 'roy', age : 42},
+];
 // map
 // const output1 = users.map(function (x) {
 //       return x.firstName + " " + x.lastName + " " + x.age;
@@ -488,18 +488,18 @@
 // console.log(output);
 
 // print first name if people have age is > 30.
-// const output = users.filter(function (X) {
-//       return X.age > 30;
-// }).map(function (x) {
-//       return " Name: " + x.firstName + ", age: " + x.age;
-// });
-// console.log(output);
+const output = users.filter(function (X) {
+      return X.age > 30;
+}).map(function (x) {
+      return x.firstName;
+});
+console.log(output);
 
-//you can also achive this by reduce method
-// const output = users.reduce(function (acc, curr){
-//       if(curr.age > 30){
-//             acc.push(curr.firstName);
-//       }
-//       return acc;
-// }, []);
-// console.log(output);
+// you can also achive this by reduce method
+const output1 = users.reduce(function (acc, curr){
+      if(curr.age > 30){
+            acc.push(curr.firstName);
+      }
+      return acc;
+}, []);
+console.log(output1);
