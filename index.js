@@ -338,30 +338,127 @@
 //you can optimize this code to manage easy debugging
 //example how can we make easier to calculate
 
-const radius = [5, 6, 7, 8];
+// const radius = [5, 6, 7, 8];
 
-const area = function (radius) {
-      return Math.PI * radius * radius;
-};
+// const area = function (radius) {
+//       return Math.PI * radius * radius;
+// };
 
-const diameter = function (radius) {
-      return 2 * radius;
-}
+// const diameter = function (radius) {
+//       return 2 * radius;
+// }
 
-const cicumference = function (radius) {
-      return 2 * Math.PI * radius;
-}
+// const cicumference = function (radius) {
+//       return 2 * Math.PI * radius;
+// }
 
-const calculate = function (radius, logic) {
-      const output = [];
-      for (let i = 0; i < radius.length; i++) {
-            output.push(logic(radius[i]));
+// const calculate = function (radius, logic) {
+//       const output = [];
+//       for (let i = 0; i < radius.length; i++) {
+//             output.push(logic(radius[i]));
+//       }
+//       return output;
+// };
+
+// console.log(calculate(radius, area));
+// console.log(calculate(radius, diameter));
+// console.log(calculate(radius, cicumference));
+
+
+
+// map function in javascript : - map function in javascript : - map function in javascript : - map function in javascript
+// const arr = [4,6,8,10,12,14]; 
+// // make it double 
+// function double(x){
+//       return x * 2;
+// }
+
+// //make it triple
+// function triple(x){
+//       return x * 3;
+// }
+
+// //make it binary
+// function binary(x){
+//       return x.toString(2);
+// }
+
+// const output = arr.map(double);
+// const output1 = arr.map(triple);
+// const output2 = arr.map(binary);
+// // you can also write this 
+// const output3 = arr.map(function binary(x){
+//       return x.toString(2);
+// });
+// // also write like this write in a single line.
+// const output4 = arr.map((x) => x.toString(2));
+// console.log(output);
+// console.log(output1);
+// console.log(output2);
+// console.log(output3);
+// console.log(output4);
+
+// filter function in javascript : - filter function in javascript : - filter function in javascript : 
+// :- filter data from given array 
+// const arr = [5, 6, 2, 1, 7, 9, 4];
+// console.log(arr);
+
+// //find odd numbers in array
+// function isOdd (x) {
+//       return x % 2;
+// }
+// const output = arr.filter(isOdd);
+// console.log(output);
+
+// // find even Number in array 
+
+// function isEven (x) {
+//       return x % 2 === 0;
+// }
+// const output1 = arr.filter(isEven);
+// console.log(output1);
+
+// //find which Number is grater than 4
+
+// const output2 = arr.filter((x) => x < 4 );
+// console.log(output2);
+
+
+// reduce function in javascript :- reduce function in javascript : reduce function in javascript
+// this is using treditional function 
+const arr = [17, 18, 3, 4, 1, 61];
+function sumNumbar (arr) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
       }
-      return output;
-};
+      return sum;
+}
+console.log(sumNumbar(arr));
+//Now calculate this using reduce function.
+const output = arr.reduce(function (acc, curr){
+      acc = acc + curr;
+      return acc;
+}, 0);
+console.log(output);
 
-console.log(calculate(radius, area));
-console.log(calculate(radius, diameter));
-console.log(calculate(radius, cicumference));
+//another example to find Maximum number
+function maxNumbar (arr) {
+      let max = 0;
+      for (let i = 0; i < arr.length; i++) {
+            if(arr[i] > max){
+                  max = arr[i];
+            }
+      }
+      return max;
+}
+console.log(maxNumbar(arr));
+//Now solve with reduce method.
+const outPut = arr.reduce( function (acc, curr) {
+       if(curr > acc ){
+            acc = curr;
+       }
+       return acc;
+}, 0)
 
-
+console.log(outPut);
