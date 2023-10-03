@@ -290,10 +290,52 @@
 
 
 
-      console.log('Start');
+//       console.log('Start');
 
-setTimeout(function() {
-  console.log('Inside setTimeout callback');
-}, 1000);
+// setTimeout(function() {
+//   console.log('Inside setTimeout callback');
+// }, 1000);
 
-console.log('End');
+// console.log('End');     
+
+
+//heigher order function
+// Function that takes another function as argument(callback function) is known as Higher order functions.
+// It is this ability that function can be stored, passed and returned,  they are called first class citizens.
+
+// const radius = [5,7,9,13];
+
+const calculateArea = function (radius) {
+      const output = [];
+      for (let i = 0; i < radius.length; i++) {
+            output.push(Math.PI * radius[i] * radius[i]);
+      }
+      return output;
+};
+
+console.log(calculateArea(radius));
+
+const calculateCicumference = function (radius) {
+      const output = [];
+      for (let i = 0; i < radius.length; i++) {
+            output.push(2 * Math.PI * radius[i]);
+      }
+      return output;
+};
+
+console.log(calculateCicumference(radius));
+
+
+const calculateDiameter = function (radius) {
+      const output = [];
+      for (let i = 0; i < radius.length; i++) {
+            output.push(2 * radius[i]);
+      }
+      return output;
+};
+
+console.log(calculateDiameter(radius));
+//you can optimize this code to manage easy debugging
+
+// const radius = [5, 6, 7, 8];
+
