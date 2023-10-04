@@ -526,3 +526,55 @@
 // }).then(function (paymentInfo) {
 //       return updateWalletBalance(paymentInfo);
 // });
+
+// another example  of promise
+
+// const cart = ["shoes", "pants", "kurta"];
+
+// createOrder(cart)
+// .then(function (orderId) {
+//       console.log(orderId);
+//       return orderId;
+// })
+// .then(function (orderId) {
+//       return proceedToPayment(orderId);
+// })
+// .then(function (paymentInfo) {
+//       console.log(paymentInfo);
+// })
+// .catch(function (error) {
+//       console.log(error.message);
+// });
+
+// function createOrder(cart){
+//       //create promise object
+//       const pr = new Promise(function (resolve, reject) {
+
+//             if(!validateCart(cart)) {
+//                   const err = new Error("Invalid cart");
+//                   reject(err);
+//             }
+
+//             const orderId = "12345";
+//             if(orderId){
+//                   setTimeout(function(){
+//                         resolve(orderId);
+//                   }, 5000);
+//             }
+//       });
+      
+//       return pr;
+// }
+
+// function proceedToPayment(orderId){
+//       /// code 
+//       return new Promise(function (resolve, reject) {
+//             setTimeout(function(){
+//                   resolve("Payment Successful");
+//             }, 5000);
+//       });
+// }
+
+// function validateCart(cart){
+//       return true;
+// }
