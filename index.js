@@ -518,11 +518,11 @@
 // });
 
 // example of Promise with promise chaining async
-const order = createOrder(cart)
-.then(function (orderId) {
-      return proceedToPayment(orderId);
-}).then(function (paymentInfo) {
-      return showOrderSummary(paymentInfo);
-}).then(function (paymentInfo) {
-      return updateWalletBalance(paymentInfo);
-});
+// const order = createOrder(cart)
+// .then(function (orderId) {
+//       return proceedToPayment(orderId);
+// }).then(function (paymentInfo) {
+//       return showOrderSummary(paymentInfo);
+// }).then(function (paymentInfo) {
+//       return updateWalletBalance(paymentInfo);
+// });
