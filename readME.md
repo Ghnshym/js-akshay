@@ -1,4 +1,4 @@
-# JavaScript Fundamentals
+# JavaScript Fundamentals Basic to Advanced
 
 This repository covers various fundamental JavaScript concepts. Below is an outline of the topics covered:
 
