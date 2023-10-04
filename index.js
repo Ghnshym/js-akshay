@@ -578,3 +578,19 @@
 // function validateCart(cart){
 //       return true;
 // }
+
+
+//async function in javascript 
+// it always returns Promise
+
+const p = new Promise(function (resolve, reject) {
+      resolve("returning Promise from p");
+})
+
+async function getData(){
+      return p;
+}
+
+const data = getData();
+console.log(data);// it will print promise 
+data.then((response) => console.log(response)); //it will print actual response
