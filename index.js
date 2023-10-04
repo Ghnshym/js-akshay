@@ -591,6 +591,7 @@ async function getData(){
       return p;
 }
 
+
 const data = getData();
 console.log(data);// it will print promise 
 data.then((response) => console.log(response)); //it will print actual response
