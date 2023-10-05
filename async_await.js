@@ -65,43 +65,47 @@
 // another example 
 // Define an asynchronous function
 
-// const API_URL = 'https://api.github.com/users/ghnshym';
+const API_URL = 'http://127.0.0.1:8000/api/users';
 
-// async function fetchData() {
-//     try {
-//       const response = await fetch(API_URL);
-      
-//       if (!response.ok) {
-//         throw new Error('Failed to fetch data');
-//       }
-//       const data = await response.json();
-     
-//       console.log('Data:', data);
-//     } catch (error) {
-//       console.log(error.message);
-//     }
-//   }
-//   fetchData();
-
-//   new example 
-function resolveAfter2Seconds() {
-    
+async function fetchData() {
     try {
-    return new Promise(function (resolve) {
-      setTimeout( function () {
-        resolve('resolved');
-      }, 2000);
-    });
+      const response = await fetch(API_URL);
+      
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await response.json();
+     
+      console.log(data[9]);
     } catch (error) {
-        console.log(error.message);
+      console.log(error.message);
     }
   }
+  fetchData();
+
+
+
+
   
-  async function asyncCall() {
-    console.log('calling');
-    const result = await resolveAfter2Seconds();
-    console.log(result);
-  }
+//   new example 
+// function resolveAfter2Seconds() {
+    
+//     try {
+//     return new Promise(function (resolve) {
+//       setTimeout( function () {
+//         resolve('resolved');
+//       }, 2000);
+//     });
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+//   }
   
-  asyncCall();
+//   async function asyncCall() {
+//     console.log('calling');
+//     const result = await resolveAfter2Seconds();
+//     console.log(result);
+//   }
+  
+//   asyncCall();
   
