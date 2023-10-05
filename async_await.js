@@ -65,24 +65,43 @@
 // another example 
 // Define an asynchronous function
 
-const API_URL = 'https://api.github.com/users/ghnshym';
+// const API_URL = 'https://api.github.com/users/ghnshym';
 
-async function fetchData() {
+// async function fetchData() {
+//     try {
+//       const response = await fetch(API_URL);
+      
+//       if (!response.ok) {
+//         throw new Error('Failed to fetch data');
+//       }
+//       const data = await response.json();
+     
+//       console.log('Data:', data);
+//     } catch (error) {
+//       console.log(error.message);
+//     }
+//   }
+//   fetchData();
+
+//   new example 
+function resolveAfter2Seconds() {
+    
     try {
-      const response = await fetch(API_URL);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
-      }
-      
-      const data = await response.json();
-      
-      // Do something with the data
-      console.log('Data:', data);
+    return new Promise(function (resolve) {
+      setTimeout( function () {
+        resolve('resolved');
+      }, 2000);
+    });
     } catch (error) {
-      console.log(error.message);
+        console.log(error.message);
     }
   }
   
-  fetchData();
+  async function asyncCall() {
+    console.log('calling');
+    const result = await resolveAfter2Seconds();
+    console.log(result);
+  }
+  
+  asyncCall();
   
