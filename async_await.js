@@ -9,11 +9,18 @@
     // - it will wait untill promise is resolved that it will print or excute next line
 
 
-const p = new Promise(function(resolve, reject) {
-    setTimeout(function () {
-        resolve("Promise resolve value");
-    }, 2000);
-});
+// const p1 = new Promise(function(resolve, reject) {
+//     setTimeout(function () {
+//         resolve("Promise resolve value");
+//     }, 5000);
+// });
+
+
+// const p2 = new Promise(function(resolve, reject) {
+//     setTimeout(function () {
+//         resolve("Promise resolve value");
+//     }, 10000);
+// });
 
 // function getData() {
 //     p.then((res) => console.log(res));
@@ -24,10 +31,33 @@ const p = new Promise(function(resolve, reject) {
 
 // now using async and await functions
 
-async function getPromise() {
-    const pro = await p; // it will wait for it to complete before executing next line.
-    console.log("Promise resolved");
-    console.log(pro);
-}
+// async function getPromise() {
+//     console.log("Promise before async");
+//     const val = await p1; // it will wait for it to complete before executing next line.
+//     console.log("Promise resolved");
+//     console.log(val);
 
-getPromise();
+//     const val2 = await p2; // it will wait for it to complete before executing next line.
+//     console.log("Promise resolved 2");
+//     console.log(val2);
+// }
+
+// getPromise();
+
+
+//fetch data using api await method :
+
+// const API_URL = "https://api.github.com/users/ghnshym";
+
+// async function getData() {
+//     try {
+//         const data = await fetch(API_URL);
+//         const dataValue = await data.json();
+//         console.log(`Name : ${dataValue.name}, Company Name : ${dataValue.company}`);
+//         // console.log(dataValue);
+//     } catch (err) {
+//         console.log(err.message);
+//     } 
+// }
+
+// getData();
